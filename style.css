@@ -1,0 +1,92 @@
+body { font-family:"Segoe UI",Tahoma,sans-serif; margin:0; background:#f4f8fc; }
+header {
+  display: flex;
+  align-items: center;         
+  justify-content: space-between; 
+  background: #023e8a;
+  color: white;
+  padding: 10px 20px;
+  flex-wrap: wrap;             
+  gap: 10px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;                   
+}
+
+header h1 {
+  margin: 0;
+  font-size: 20px;
+  text-align: left;
+  flex-shrink: 0;
+}
+
+/* Adjust emblem size */
+header .emblem {
+  height: 50px;         /* suitable corporate size */
+  width: auto;          /* maintain aspect ratio */
+}
+
+.export-btns {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-shrink: 0;
+}
+
+.export-btns button {
+  margin-left: 5px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  color: white;
+}
+
+#exportExcel { background:#198754; } 
+#exportPDF { background:#198754; }
+.export-btns button:hover { opacity:0.85; }
+
+.subheader { text-align:center; font-size:14px; margin:5px 0; }
+.grant-buttons { text-align:center; margin:10px 0; }
+.grant-buttons button { background:#0077b6; color:white; border:none; border-radius:6px; margin:3px; padding:6px 12px; cursor:pointer; }
+.grant-buttons button:hover { opacity:0.9; }
+form { display:grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap:10px; margin:10px 20px; padding:15px; background:white; border-radius:8px; box-shadow:0 2px 5px rgba(0,0,0,0.1); }
+form.hidden{display:none;}
+form label{display:flex;flex-direction:column;font-size:13px;}
+form input{padding:6px;border:1px solid #ccc;border-radius:4px;}
+form input.wide{width:400px;}
+form button{grid-column:1/-1;padding:8px;background:#023e8a;color:white;border:none;border-radius:6px;cursor:pointer;}
+#responseTable{width:100%;border-collapse:collapse;table-layout:fixed;word-wrap:break-word;font-size:12px;}
+#responseTable th,#responseTable td{padding:6px;border:1px solid #ccc;text-align:center;white-space:normal;}
+#responseTable th{background:#023e8a;color:white;position:sticky;top:0;z-index:2;}
+.filter-btn{background:none;border:none;cursor:pointer;color:#ddd;}
+.filter-btn:hover{color:white;}
+.action-btn{padding:4px 8px;margin:0 2px;border:none;border-radius:4px;cursor:pointer;font-size:11px;}
+.action-btn.edit{background:#0077b6;color:white;}
+.action-btn.delete{background:#d90429;color:white;}
+.action-btn:hover{opacity:0.85;}
+.filter-popup{position:absolute;background:white;border:1px solid #ccc;border-radius:6px;box-shadow:0 2px 6px rgba(0,0,0,0.15);padding:8px;z-index:1000;max-height:200px;overflow-y:auto;font-size:12px;}
+.filter-popup label{display:block;margin:2px 0;}
+.filter-popup button{margin-top:6px;width:100%;background:#023e8a;color:white;border:none;border-radius:4px;padding:4px;cursor:pointer;font-size:12px;}
+#responseTable th:nth-child(1) { width: 3%; }   /* SI.No */
+#responseTable th:nth-child(2) { width: 7%; }  /* Mandal */
+#responseTable th:nth-child(3) { width: 15%; }  /* Name of the Work */
+#responseTable th:nth-child(4) { width: 6%; }   /* Estimated Cost */
+#responseTable th:nth-child(5) { width: 5%; }   /* Grant */
+#responseTable th:nth-child(6) { width: 8%; }  /* Administrative Sanction */
+#responseTable th:nth-child(7) { width: 8%; } 
+#responseTable th:nth-child(8) { width: 7%;}
+#responseTable th:nth-child(8) { width: 6%;}
+#responseTable th:nth-child(9) { width: 7%; }
+#responseTable th:nth-child(10) { width: 5%; }
+#responseTable th:nth-child(11) { width: 6%; }
+#responseTable th:nth-child(12) { width: 5%; }
+#responseTable th:nth-child(13) { width: 5%; }
+#responseTable th:nth-child(14) { width: 6%; }
+#responseTable th:nth-child(15) { width: 7%; }
+#responseTable th:nth-child(16) { width: 5%; }/* Technical Sanction */
+/* continue similar for remaining columns */

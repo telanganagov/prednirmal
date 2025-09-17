@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Panchayat Raj Engineering Department, Nirmal</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+</head>
+<body>
+
+<header>
+  <div class="header-left">
+    <img src="https://upload.wikimedia.org/wikipedia/en/6/61/Emblem_of_Telangana.svg" alt="Telangana Emblem" class="emblem">
+    <h1>Panchayat Raj Engineering Department, Nirmal</h1>
+  </div>
+  <div class="export-btns">
+    <button id="exportExcel"><i class="fas fa-file-excel"></i> Export Excel</button>
+    <button id="exportPDF"><i class="fas fa-file-pdf"></i> Export PDF</button>
+  </div>
+</header>
+
+
+<div class="grant-buttons">
+  <!-- 20 grant buttons -->
+  <button onclick="toggleForm('MGNREGS')">MGNREGS</button>
+  <button onclick="toggleForm('SDF')">SDF</button>
+  <button onclick="toggleForm('CDP')">CDP</button>
+  <button onclick="toggleForm('MPLADS')">MPLADS</button>
+  <button onclick="toggleForm('SBM G')">SBM G</button>
+  <button onclick="toggleForm('Grant 6')">Grant 6</button>
+  <button onclick="toggleForm('Grant 7')">Grant 7</button>
+  <button onclick="toggleForm('Grant 8')">Grant 8</button>
+  <button onclick="toggleForm('Grant 9')">Grant 9</button>
+  <button onclick="toggleForm('Grant 10')">Grant 10</button>
+  <button onclick="toggleForm('Grant 11')">Grant 11</button>
+  <button onclick="toggleForm('Grant 12')">Grant 12</button>
+  <button onclick="toggleForm('Grant 13')">Grant 13</button>
+  <button onclick="toggleForm('Grant 14')">Grant 14</button>
+  <button onclick="toggleForm('Grant 15')">Grant 15</button>
+  <button onclick="toggleForm('Grant 16')">Grant 16</button>
+  <button onclick="toggleForm('Grant 17')">Grant 17</button>
+  <button onclick="toggleForm('Grant 18')">Grant 18</button>
+  <button onclick="toggleForm('Grant 19')">Grant 19</button>
+  <button onclick="toggleForm('Grant 20')">Grant 20</button>
+</div>
+  
+
+<form id="reportForm" class="hidden">
+  <label>Mandal: <input type="text" name="Mandal"></label>
+  <label>Name of the Work: <input type="text" name="Name of the Work"></label>
+  <label>Estimated Cost (In Lakhs): <input type="text" name="Estimated Cost (In Lakhs)"></label>
+  <label>Grant: <input type="text" name="Grant"></label>
+  <label>Administrative Sanction: <input type="text" name="Administrative Sanction"></label>
+  <label>Technical Sanction: <input type="text" name="Technical Sanction"></label>
+  <label>Agreement: <input type="text" name="Agreement"></label>
+  <label>Measurement Book No.: <input type="text" name="Measurement Book No."></label>
+  <label>Status of the work (C/P/N): <input type="text" name="Status of the work (C/P/N)"></label>
+  <label>Percentage of the Work Completed: <input type="text" name="Percentage of the Work Completed"></label>
+  <label>Bills Submitted (In Rs.): <input type="text" name="Bills Submitted (In Rs.)"></label>
+  <label>Bill Paid (In Rs.): <input type="text" name="Bill Paid (In Rs.)"></label>
+  <label>EMD&FSD Released: <input type="text" name="EMD&FSD Released"></label>
+  <label>Name of the Executing Agency: <input type="text" name="Name of the Executing Agency"></label>
+  <label>Remarks: <input type="text" name="Remarks"></label>
+  <button type="submit">Submit</button>
+</form>
+
+<table id="responseTable">
+<thead>
+<tr>
+  <div class="subheader">Admin: Drawing Branch PIU, Nirmal</div>
+  <th>SI.No</th>
+  <th>Mandal <button class="filter-btn" onclick="toggleFilter('Mandal', this)"><i class="fas fa-filter"></i></button></th>
+  <th>Name of the Work</th>
+  <th>Estimated Cost (In Lakhs)</th>
+  <th>Grant <button class="filter-btn" onclick="toggleFilter('Grant', this)"><i class="fas fa-filter"></i></button></th>
+  <th>Administrative Sanction</th>
+  <th>Technical Sanction</th>
+  <th>Agreement</th>
+  <th>Measurement Book No.</th>
+  <th>Status of the work (C/P/N)<button class="filter-btn" onclick="toggleFilter('Status of the work (C/P/N)', this)"><i class="fas fa-filter"></i></button></th>
+  <th>Percentage of the Work Completed</th>
+  <th>Bills Submitted (In Rs.) <button class="filter-btn" onclick="toggleFilter('Bills Submitted (In Rs.)', this)"><i class="fas fa-filter"></i></button></th>
+  <th>Bill Paid (In Rs.) <button class="filter-btn" onclick="toggleFilter('Bill Paid (In Rs.)', this)"><i class="fas fa-filter"></i></button></th>
+  <th>EMD&FSD Released <button class="filter-btn" onclick="toggleFilter('EMD&FSD Released', this)"><i class="fas fa-filter"></i></button></th>
+  <th>Name of the Executing Agency</th>
+  <th>Remarks</th>
+  <th>Actions</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+
+<script src="script.js"></script>
+</body>
+</html>
